@@ -28,5 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
     emoji.className = 'emoji';
     emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
     document.body.appendChild(emoji);
+    emoji.style.opacity = 0.6;
   }
 });
