@@ -1,26 +1,19 @@
 var pages = document.getElementsByClassName('page');
-for(var i = 0; i < pages.length; i++)
-{
+for (var i = 0; i < pages.length; i++) {
   var page = pages[i];
-  if (i % 2 === 0)
-  {
+  if (i % 2 === 0) {
     page.style.zIndex = (pages.length - i);
   }
 }
 
-document.addEventListener('DOMContentLoaded', function(){
-  for(var i = 0; i < pages.length; i++)
-  {
+document.addEventListener('DOMContentLoaded', function () {
+  for (var i = 0; i < pages.length; i++) {
     pages[i].pageNum = i + 1;
-    pages[i].onclick = function()
-    {
-      if (this.pageNum % 2 === 0)
-      {
+    pages[i].onclick = function () {
+      if (this.pageNum % 2 === 0) {
         this.classList.remove('flipped');
         this.previousElementSibling.classList.remove('flipped');
-      }
-      else
-      {
+      } else {
         this.classList.add('flipped');
         this.nextElementSibling.classList.add('flipped');
       }
@@ -28,8 +21,9 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   // Add falling emojis
-  var emojis = ['🎉', '🎂', '🎈', '🎁', '🎊', '🥳'];
-  for (var j = 0; j < 10; j++) {
+  var emojis = ['🎉', '🎂', '🎈', '🎁', '🎊', '🥳', '🍾', '🥂', '🍻', '🎏', '🎀', '🕯️', '🍰', '🎡', '🎢', '🍬', '🍭', '🍫', '🎵', '🎶', '🧁', '🍷', '🍸'];
+
+  for (var j = 0; j < 50; j++) {
     var emoji = document.createElement('div');
     emoji.className = 'emoji';
     emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
